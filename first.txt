@@ -10,7 +10,9 @@ git add .   ディレクトリ内すべてのファイルをステージング�
 git commit  ローカルリポジトリにコミットする。
 git commit -v 変更がかかった詳細内容が確認できる。
 git push    リモートリポジトリにプッシュする。
-git status  ディレクトリ内ファイルの状態を確認する。ああ
+git status  ディレクトリ内ファイルの状態を確認する。最後のcommitから更新された分が確認できる
+    On branch master:
+    origin/master:リモートリポジトリ(githubなど)を指す
 git log     更新の履歴が確認できる。
 git rm xxx  指定の削除ファイルをステージングエリアに移行する
 
