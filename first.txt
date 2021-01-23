@@ -18,6 +18,10 @@ git log --oneline   一行でログを表示する
 git log -p xxx      ファイルの差分を表示する
 git log -n xxx      指定数文のログだけ確認できる
 git rm xxx  指定の削除ファイルをステージングエリアに移行する
+            コミットしたファイルからも削除することができる
+git rm --cached xxx 指定ファイルをコミットから除外するが、ローカルには残す
+git reset HEAD xxx  指定した削除済みファイルをステージングに戻す
+git checkout xxx    指定したファイルをローカルリポジトリに復活させる
 git diff    ファイルの変更差分を表示する。ローカルとステージングの差異をみてる。
 git diff HEAD       ステージングとコミットの差分を見れる
 git remote add origin https~(githubのurl)   ローカルリポジトリとリモートリポジトリのリンク
@@ -27,3 +31,13 @@ git remote add origin https~(githubのurl)   ローカルリポジトリとリ�
 1行目：変更内容の要約
 2行目：空行
 3行目：変更した理由
+
+.gitignoreファイルに指定されたファイルはGit管理から外すことができる
+・自動生成されるファイル
+・パスワードが記載されているファイル    等....
+
+.gitignoreファイルへの書き方
+#           #から始まる行はコメント
+xxx.html    指定したファイルを除外してくれる
+/xxx.html   ルートディレクトリを指定
+dir/        ディレクトリ以下を除外
